@@ -1,0 +1,14 @@
+node_modules/
+
+*.log
+*.zip
+
+style.css
+style.css.map
+
+editor.css
+editor.css.map
+
+main.js
+
+.DS_Store

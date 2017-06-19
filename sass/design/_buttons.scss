@@ -1,0 +1,106 @@
+#donate-button {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 28.5px / 50%;
+	color: #FFF;
+	text-transform: uppercase;
+	i {
+		padding: 0 15px 2px 0;
+
+	}
+}
+
+%btn-base {
+	display: inline-block;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+a.btn-sm,
+button.btn-sm {
+	@extend %btn-base;
+	font-size: 0.9em;
+	height: 35px;
+	padding: 20px 35px;
+	line-height: 0.2;
+	border-radius: 20px / 50%;
+	&.btn-arrow:after {
+		font-size: 1em;
+	}
+}
+
+.btn-md,
+a.btn-md,
+button.btn-md {
+	@extend %btn-base;
+	height: 50px;
+	padding: 20px 35px;
+	line-height: 0.7;
+	font-size: 1.25em;
+	border-radius: 28.5px / 50%;
+	&.btn-arrow:after {
+		font-size: 30px;
+		top: 48%;
+	}
+}
+
+a.btn-lg,
+button.btn-lg {
+	@extend %btn-base;
+	height: 60px;
+	font-size: 25px;
+	padding: 20px 45px;
+	line-height: 1;
+	border-radius: 30px / 50%;
+	&.btn-arrow:after {
+		font-size: 30px;
+	}
+}
+
+@each $color, $value in $btn-colors {
+	.btn-#{$color} {
+		background-color: $value;
+		color: #FFF;
+		transition: all 200ms ease-out;
+		&:hover {
+			background-color: darken($value, 8%);
+		}
+		&.btn-ghost {
+			background-color: transparent;
+			color: $value;
+			border: 2px $value solid;
+			&:hover {
+				color: darken($value, 8%);
+				border-color: darken($value, 8%);
+			}
+		}
+	}
+}
+
+@mixin arrow() {
+	&:after {
+		@extend %fa;
+		top: 50%;
+		transform: translate(0, -50%);
+		opacity: 0;
+		padding-right: 10px;
+		position: absolute;
+		transition: all 0.2s ease-out;
+		color: currentColor;
+		content: '\f105';
+		font-size: 20px;
+		top: 50%;
+	}
+	&:hover:after {
+		transform: translate(50%, -50%);
+		opacity: 1;
+	}
+}
+
+.btn-arrow {
+	position: relative;
+	@include arrow();
+}

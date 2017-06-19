@@ -1,0 +1,50 @@
+.program-banner {
+	display: flex;
+	align-items: stretch;
+}
+
+.program-banner .program {
+	@extend %h6;
+	box-sizing: border-box;
+	padding: 0 25px;
+	height: calc( 100vh / 3 );
+	min-height: 225px;
+	flex: 1 1 33.3333%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFF;
+	text-decoration: none;
+	flex-flow: column nowrap;
+	text-align: center;
+	img {
+		width: auto;
+		height: 100px;
+		transition: all 100ms ease-out;
+		margin-bottom: 25px;
+	}
+	&:hover img {
+		height: 110px;
+	}
+	&:nth-child(1) {
+		background: linear-gradient(135deg,#f15d22, #f71e18);
+	}
+	&:nth-child(2) {
+        background: linear-gradient(135deg, #006892, #006892);
+	}
+	&:nth-child(3) {
+	    background: linear-gradient(135deg, #71eb12, #4ea609);
+	}
+	&:nth-child(4) {
+	    background: linear-gradient(135deg, #3d358c 0%, #3d358c 40%, #1f157d 60%);
+	}
+	&:nth-child(n+5) {
+		display: none;
+	}
+}
+
+@media screen and ( max-width: 768px ) {
+	.program-banner {
+		display: block;
+	}
+}

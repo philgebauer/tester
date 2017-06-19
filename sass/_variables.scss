@@ -1,0 +1,43 @@
+// Globally Scoped Sass Variables, Lists and Maps
+
+// Colors
+$c-purple: rgb(51, 42, 134);
+$c-orange: rgb(241, 93, 34);
+$c-teal: rgb(0, 104, 146);
+$c-green: rgb(122, 192, 67);
+$c-black: rgb(0,0,0);
+$c-lavender: rgb(179, 162, 206);
+$c-grey: rgb(235,235, 235);
+
+$btn-colors: (
+	'purple': $c-purple,
+	'orange': #f25b22,
+	'teal': $c-teal,
+	'green': #75e931,
+	'black': $c-black,
+	'lavender': $c-lavender,
+	'grey': $c-grey,
+	'red': #FF0063
+);
+
+
+// Component Colors
+// Links
+$c-link: $c-teal;
+
+// Fonts
+$font-main: 'Poppins', sans-serif;
+$font-cursive: 'Shadows Into Light Two', cursive;
+
+$btnColors: (
+	'purple': $c-purple,
+	'orange': $c-orange,
+	'teal': $c-teal,
+	'green': $c-green,
+	'black': $c-black,
+	'lavender': $c-lavender,
+	'grey': $c-grey,
+	'bright-green': rgb(117, 233, 49),
+	'bright-orange': rgba(#f25b22, 1),
+	'bright-red': #ff0063
+);

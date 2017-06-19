@@ -1,0 +1,35 @@
+.home-events {
+	padding: 100px 0;
+	background-color: #ebebeb;
+}
+
+.event-title {
+	margin: 15px 0 0 0;
+}
+
+.event-time {
+	color: $c-purple;
+	font-weight: 600;
+}
+
+.event-content {
+	line-height: 1.5;
+	font-weight: 300;
+}
+
+.event-thumbnail-container {
+	text-align: center;
+}
+
+.event-thumbnail-container img {
+	width: 390px;
+	max-width: 100%;
+	height: auto;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center center;
+}
+
+.events-btn {
+	margin-top: 15px;
+}

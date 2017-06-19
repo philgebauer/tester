@@ -1,0 +1,145 @@
+.post-content {
+	margin-bottom: 50px;
+}
+.post-content li {
+    margin: 10px auto;
+}
+
+@mixin postContent() {
+	h1 {
+		@extend %h1;
+	}
+
+	h2 {
+		@extend %h2;
+	}
+
+	h3 {
+		@extend %h3;
+	}
+
+	h4 {
+		@extend %h4;
+	}
+
+	h5 {
+		@extend %h5;
+	}
+
+	h6 {
+		@extend %h6;
+	}
+
+	p,
+	ul li,
+	ol li {
+		@extend %p;
+	}
+
+	ul li,
+	ol li {
+		margin: 10px auto;
+	}
+
+	blockquote {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	blockquote > p {
+		@extend %h2;
+		font-family: $font-cursive;
+		line-height: 1.28;
+	}
+
+	pre {
+	    white-space: -moz-pre-wrap;
+	    white-space: -o-pre-wrap;
+	    white-space: -pre-wrap;
+	    white-space: pre-wrap;
+	    word-wrap: break-word;
+	}
+	img.alignleft {
+	    border-radius: 3px;
+	    height: auto;
+	    margin: 0 20px 20px 0;
+	    max-width: 50%;
+	}
+	img.alignnone,
+	img.aligncenter {
+		border-radius: 5px;
+		display: block;
+		height: auto;
+		margin: 20px auto;
+		max-width: 100%;
+	}
+	img.alignright {
+	    border-radius: 3px;
+	    height: auto;
+	    margin: 0 0 20px 20px;
+	    max-width: 50%;
+	}
+	figure.wp-caption {
+	    background-color: #ebebeb;
+	    border-radius: 5px;
+	    box-sizing: border-box;
+	    max-width: 100%;
+	    padding: 25px 25px 0px 25px;
+	    img {
+	    	border-radius: 3px;
+	    	display: block;
+	    	height: auto;
+	    	max-width: 100%;
+	    }
+	    &.alignright {
+	    	float: right;
+	    	margin: 0 0 20px 20px;
+	    	width: 50% !important;
+	    }
+	    &.alignleft {
+	    	float:left;
+	    	margin: 0 20px 20px 0;
+	    	width: 50% !important;
+	    }
+	    &.alignnone,
+	    &.aligncenter {
+	    	display:block;
+	    	margin: 0 auto;
+	    }
+	    figcaption.wp-caption-text {
+	    	font-size: 0.8em;
+	    	padding: 12.5px 0;
+	    }
+	}
+	.video-container {
+		height: 0;
+		overflow: hidden;
+		padding-bottom: 56.25%;
+		position: relative;
+	    margin: 20px auto;
+	}
+	.video-container iframe,
+	.video-container object,
+	.video-container embed,
+	.video-container video {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	 }
+	.twitter-tweet {
+		margin-left: auto !important;
+	    margin-right: auto !important;
+	}
+	.facebook-container,
+	.instagram-container {
+	    margin: 0 auto;
+	    max-width: 100%;
+	    width: 656px;
+	}
+}
+
+.post-content {
+	@include postContent();
+}

@@ -1,0 +1,38 @@
+/*!
+Theme Name: YouthCARE Minnesota
+Theme URI: https://youthcaremn.org
+Author: Drop It Like It's HOTH
+Author URI: https://gitlab.com/dilih
+Description: Custom WordPress theme for YouthCARE Minnesota.
+Version: 0.0.1
+License: GPLV2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column
+Text Domain: youthcare
+*/
+
+@import 'variables';
+@import 'includes/includes';
+@import 'mixins';
+@import 'design/typography';
+@import 'design/buttons';
+
+@import 'wordpress/wordpress';
+@import 'wordpress/gallery';
+@import 'wordpress/post-content';
+@import 'wordpress/widgets';
+
+@import 'layout/footer';
+@import 'layout/timeline';
+@import 'layout/publications';
+@import 'layout/single';
+@import 'layout/sidebar-container';
+
+@import 'component/title-banner';
+@import 'component/header-nav';
+@import 'component/home-slider';
+@import 'component/loop-home';
+@import 'component/program-banner';
+@import 'component/home-events';
+@import 'component/cta';
+@import 'component/blog-roll';

@@ -1,0 +1,61 @@
+$timeline-dot-background-color: red;
+$timeline-dot-font-color: black;
+$timeline-dot-line-color: #333;
+
+.timeline {
+	list-style-type: none;
+	margin: 50px auto;
+	max-width: 90%;
+	padding: 0;
+	width: 1000px;
+}
+
+.timeline-item {
+	align-items: stretch;
+	display: flex;
+	@media screen and ( max-width: 768px ) {
+		flex-flow: column nowrap;	
+	}
+}
+
+.timeline-year {
+	align-items: center;
+	border-right: 5px solid $timeline-dot-line-color;
+	display: flex;
+	flex: 0 0 150px;
+	margin: 0;
+	padding: 75px 0;
+	position: relative;
+	@media screen and ( max-width: 768px ) {
+		border-right: none;
+		text-align: center;
+		justify-content: center;
+	}
+	&:before {
+		@include fa($fa-var-circle);
+		align-items: center;
+		background-color: $timeline-dot-background-color;
+		border-radius: 50%;
+		color: $timeline-dot-font-color;
+		display: flex;
+		font-size: 16px;
+		height: 30px;
+		justify-content: center;
+		position: absolute;
+		right: -12.5%;
+		width: 30px;
+		@media screen and ( max-width: 768px ) {
+			display: none;
+		}
+	}
+}
+
+.timeline-text {
+	align-items: center;
+	display: flex;
+	margin: 0;
+	padding-left: 75px;
+	@media screen and ( max-width: 768px ) {
+		padding: 0;
+	}
+}

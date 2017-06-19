@@ -1,0 +1,46 @@
+.single-post {
+	.back-to-blog-link {
+		margin: 40px 0;
+	}
+	.post-title {
+		margin: 0;
+	}
+	.post-tags {
+		max-width: 60%;
+		a:nth-child(n+2):before {
+			display: inline-block;
+			content: ' - ';
+			padding: 0 0.25em;
+			color: #000;
+		}
+		@media screen and ( max-width: 768px ) {
+			display: flex;
+			flex-flow: column nowrap;
+			a {
+				display: block;
+				margin: 0.5em 0;
+			}
+			a:nth-child(n+2):before {
+				display: none;
+			}
+		}
+	}
+	.post-time,
+	.post-author {
+	    color: #332a86;
+	    font-weight: 600;
+	}
+	.post-meta {
+		display: flex;
+		margin: 10px 0;
+		justify-content: space-between;
+	}
+	.post-meta {
+		padding: 1em 0;
+		border-top: 1px solid #BCBCBC;
+		margin-bottom: 50px;
+	}
+	.post-content {
+		margin-bottom: 0;
+	}
+}

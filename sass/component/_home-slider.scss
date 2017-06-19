@@ -1,0 +1,137 @@
+.slider {
+	height: 100vh;
+	min-height: 600px;
+	background: linear-gradient( to bottom, #3d358c 0%,#3d358c 40%,#1f157d 60%);
+	font-family: $font-main;
+}
+.slider:after {
+	display: table;
+	clear: both;
+}
+
+.mobile-logo {
+	display: none;
+	img {
+		height: 80px;
+	}
+}
+
+@media screen and ( max-width: 1200px ) {
+	.mobile-logo {
+		display: inline;
+	}
+	.main-logo {
+		display: none;
+	}
+}
+
+.main-slider {
+	height: 100vh;
+	min-height: 600px;
+	color: #FFF;
+	width: 100%;
+	position: absolute;
+}
+
+.slide-content {
+	padding-top: 50vh;
+	@media screen and ( max-height: 600px ) {
+		padding-top: 300px;
+	}
+	& > div {
+		min-height: 150px;
+	}
+	@media screen and ( max-width: 768px ) {
+		padding-top: 40vh;
+		p {
+			font-weight: bold;
+			font-size: 1.25em;
+		}
+	}
+	.cta {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.main-slider .slide {
+	height: 100vh;
+	min-height: 600px;
+	width: 100%;
+	position: absolute;
+	display: none;
+	font-family: $font-main;
+}
+
+.slide-title {
+	font-size: 6em;
+	margin: 0;
+	line-height: 0.5;
+	text-transform: uppercase;
+	font-weight: 600;
+	@media screen and ( max-width: 768px ) {
+		font-size: 3em;
+	}
+}
+
+.slide-text {
+	font-size: 1.5em;
+}
+
+.main-slider .slide:nth-child(1) {
+	display: block;
+	background-image: url('./inc/images/component/home-slider/slide-1.jpg');
+	background-position: center top;
+	background-size: cover;
+}
+.main-slider .slide:nth-child(2) {
+	background-image: url('./inc/images/component/home-slider/slide-2.jpg');
+	background-position: center top;
+	background-size: cover;
+}
+
+.main-slider .slide:nth-child(3) {
+	background-image: url('./inc/images/component/home-slider/slide-3.jpg');
+	background-position: center top;
+	background-size: cover;
+}
+
+.home-slider-menu {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	li {
+		box-sizing: border-box;
+		padding: 0 0.5em;
+	}
+	@media screen and ( max-width: 768px ) {
+		display: none;
+	}
+}
+.home-slider-menu a {
+	color: #FFF !important;
+}
+.upper-menu {
+	display: flex;
+	align-items: center;
+}
+.upper-menu a {
+	text-decoration: none;
+}
+.slider-header {
+	width: 100%;
+	position: absolute;
+	z-index: 99999;
+	padding: 60px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.slider-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

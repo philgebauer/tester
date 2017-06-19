@@ -1,0 +1,107 @@
+.blog-roll {
+	margin: 50px 0;
+	@media screen and ( max-width: 900px ) {
+		margin: 20px 0;
+	}
+}
+.blog-roll-title {
+	text-align: center;
+	max-width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.blog-roll-container {
+	max-width: 90%;
+	width: 1200px;
+	margin: 0 auto;
+}
+.blog-posts {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+	justify-content: space-around;
+	@media screen and ( max-width: 900px ) {
+		flex-flow: column nowrap;
+	}
+	.post {
+		flex: 0 0 30%;
+		box-sizing: border-box;
+		position: relative;
+		top: 0;
+		transition: all 150ms linear;
+		display: flex;
+		flex-flow: column nowrap;
+		background-color: #ebebeb;
+		border-radius: 3px;
+		overflow: hidden;
+		@media screen and ( max-width: 900px ) {
+			flex-flow: row nowrap;
+			margin: 10px 0;
+		}
+		&:hover {
+			// top: -5px;
+			.card-read-more {
+				opacity: 1;
+				a {
+					left: 0;
+				}
+			}
+			@media screen and ( max-width: 900px ) {
+				top: 0;
+			}
+		}
+	}
+	.card-image {
+		width: 100%;
+		min-height: 150px;
+		background-size: cover;
+		background-position: center center;
+		@media screen and ( max-width: 900px ) {
+			width: auto;
+			
+			flex: 0 0 35%;
+		}
+	}
+	.card-title {
+		@extend %h6;
+		box-sizing: border-box;
+		padding: 15px;
+		transition: opacity 150ms ease-out;
+		a {
+			text-decoration: none !important;
+			color: currentColor;
+		}
+	}
+	.card-content {
+		padding: 0 15px;
+		transition: opacity 150ms ease-in;
+		font-size: 0.9em;
+		p {
+			margin: 0;
+			font-size: 1em;
+		}
+		@media screen and ( max-width: 900px ) {
+			display: none;
+		}
+	}
+	.card-read-more {
+		padding: 15px;
+		text-align: right;
+		margin-top: auto;
+		opacity: 0;
+		transition: opacity 150ms ease-out;
+		a {
+			position: relative;
+			transition: left 150ms linear;
+			left: -10px;
+		}
+		@media screen and ( max-width: 900px ) {
+			position: absolute;
+		    bottom: 0;
+		    right: 0;
+		}
+		@media screen and ( max-width: 700px ) {
+			display: none;
+		}
+	}
+}

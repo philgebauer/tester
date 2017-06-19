@@ -1,0 +1,92 @@
+.press {
+  min-width:80px;
+  display:inline-block;
+  text-align:center;
+  outline:none;
+  background-color:transparent;
+  border:none;
+  font-size:1em;
+  padding:.5em;
+  margin:0;
+  text-decoration:none;
+  cursor:pointer;
+  color:#FFF;
+  box-sizing:border-box;
+  transition: background 0.15s linear;
+  &:disabled {
+    cursor: not-allowed;
+    opacity:.3;
+  }
+}
+
+.press { //Each color gets a .press-{id} class.
+   @each $color, $hex in $btnColors {
+    &-#{$color} {
+      background-color: $hex;
+      border:2px solid $hex;
+        &:hover:not(:disabled) {
+          background-color: darken(rgba($hex,1), 8%); 
+        }
+        &:active:not(:disabled) {
+          background-color:rgba($hex,1); 
+        }
+        &:disabled {
+          background-color: $hex;
+        }
+    }
+  }
+}
+
+.press { //Modifications to the default buttons.
+  &-raised {
+    box-shadow: 2px 3px 19px -3px rgba(0,0,0,0.4);
+  }
+  &-sm {
+    font-size:.8em;
+    min-width:0px;
+  }
+  &-lg {
+    font-size:1.25em;
+  }
+  &-xl {
+    font-size:1.5em;
+  }
+  &-pill {
+    border-radius: 20px / 50%;
+    padding: 0.5em 1em;
+  }
+  &-round {
+    border-radius:8px; 
+  }
+  &-circle {
+    min-width:2.5em;
+    max-width:2.5em;
+    height:2.45em;
+    line-height:2.4em;
+    overflow:hidden;
+    padding:0;
+    border-radius:50%;
+    white-space: nowrap;
+  }
+  &-ghost {
+    background-color:transparent;
+     &:hover:not(:disabled), &:active:not(:disabled) {
+       color:#FFF;
+     }
+     @each $color, $hex in $btnColors {
+      &.press-#{$color} {
+        color:$hex;
+        border:2px solid $hex;
+        &:hover:not(:disabled) {
+          background-color:rgba($hex,.4);
+        }
+        &:active:not(:disabled) {
+          background-color:rgba($hex,.8);
+        }
+        &:disabled {
+          background:transparent;
+        }
+      }
+    }
+  }
+}

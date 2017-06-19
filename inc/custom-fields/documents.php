@@ -1,0 +1,103 @@
+<?php
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+	'key' => 'group_59053f8abde2b',
+	'title' => 'Document Fields',
+	'fields' => array (
+		array (
+			'key' => 'field_59054057aa960',
+			'label' => 'Documents',
+			'name' => 'documents',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'block',
+			'button_label' => '',
+			'sub_fields' => array (
+				array (
+					'key' => 'field_590540b8aa962',
+					'label' => 'Document Name',
+					'name' => 'document_name',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '50',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array (
+					'key' => 'field_59054095aa961',
+					'label' => 'Document (PDF)',
+					'name' => 'document_url',
+					'type' => 'file',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '50',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'url',
+					'library' => 'all',
+					'min_size' => '',
+					'max_size' => '',
+					'mime_types' => 'pdf',
+				),
+			),
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'publications',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'seamless',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => array (
+		0 => 'permalink',
+		1 => 'the_content',
+		2 => 'excerpt',
+		3 => 'custom_fields',
+		4 => 'discussion',
+		5 => 'comments',
+		6 => 'revisions',
+		7 => 'slug',
+		8 => 'author',
+		9 => 'format',
+		10 => 'page_attributes',
+		11 => 'featured_image',
+		12 => 'categories',
+		13 => 'tags',
+		14 => 'send-trackbacks',
+	),
+	'active' => 1,
+	'description' => '',
+));
+
+endif;

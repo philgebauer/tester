@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "normalize-scss": "^6.0.0"
+  },
+  "scripts": {
+    "build": "(npm run build:js) && (npm run build:css:editor) && (npm run build:css)",
+    "build:js": "webpack --optimize-minimize",
+    "build:css:editor": "node-sass --output-style compressed --include-path ./sass/ --include-path ./node_modules/ --sourceMap . ./sass/editor.scss ./editor.css",
+    "build:css": "node-sass --output-style compressed --include-path ./sass/ --include-path ./node_modules/ --sourceMap . ./sass/index.scss ./style.css",
+    "watch": "(npm run watch:css) & (npm run watch:css:editor) & (npm run watch:js)",
+    "watch:js": "webpack --watch",
+    "watch:css:editor": "node-sass --watch --output-style compressed --include-path ./sass/ --include-path ./node_modules/ --sourceMap . ./sass/editor.scss ./editor.css",
+    "watch:css": "node-sass --watch --output-style compressed --include-path ./sass/ --include-path ./node_modules/ --sourceMap . ./sass/index.scss ./style.css"
+  },
+  "name": "youthcare",
+  "version": "0.0.1",
+  "description": "A theme for YouthCAREMN.",
+  "main": "index.php",
+  "repository": "git@gitlab.com:dilih/youthcare.git",
+  "author": "Cody Ogden <cody@codyogden.com>",
+  "license": "GPLV2"
+}

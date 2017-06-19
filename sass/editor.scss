@@ -1,0 +1,42 @@
+/*
+This is the base file to ensure that typography is included in TinyMCE in WordPress admin area.
+*/
+
+@import 'variables';
+@import 'includes/fonts';
+@import 'includes/reset';
+
+body#tinymce.wp-editor {
+	font-family: $font-main;
+	margin: 9px 10px;
+	@import 'design/typography';
+	@import 'wordpress/post-content';
+	@import 'wordpress/gallery';
+	@include postContent();
+	@include gallerystyles();
+	.wp-caption.alignleft,
+	.wp-caption.alignnone,
+	.wp-caption.aligncenter,
+	.wp-caption.alignright {
+	    background-color: #ebebeb;
+	    border-radius: 5px;
+	    box-sizing: border-box;
+	    max-width: 100%;
+	    padding: 25px 25px 0px 25px;
+	    .wp-caption-dd {
+	    	font-size: 0.8em;
+	    	padding: 12.5px 0;
+	    }
+	    .wp-caption-dt img {
+	    	border-radius: 3px;
+	    }
+	}
+	.wp-caption.alignleft,
+	.wp-caption.alignright {
+		width: 50% !important;
+	}
+	div.wpview.wpview-wrap > iframe {
+		width: 550px !important;
+    	margin: 0 auto;
+	}
+}

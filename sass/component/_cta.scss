@@ -1,0 +1,62 @@
+.call-to-action {
+	background-color: #3c348c;
+	background-image: url('inc/images/component/cta/background.jpg');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 480px;
+	padding: 50px 0;
+	color: #FFF;
+}
+
+.cta-text {
+	max-width: 70%;
+	@media screen and ( max-width: 768px ) {
+		max-width: 100%;
+	}
+}
+
+.cta-buttons {
+	display: flex;
+	flex-flow: row wrap;
+	padding-top: 30px;
+}
+
+.btn-cta {
+    padding: 14px 35px;
+    margin-right: 20px;
+	i {
+		padding-right: 0.8em;
+	}
+	@media screen and ( max-width: 650px ) {
+		margin-top: 30px;
+	}
+}
+
+.btn-cta.btn-cta-transparent {
+	@extend .btn-md;
+    display: flex;
+    align-items: center;
+	line-height: auto !important;
+	background-color: transparent;
+	color: #FFF;
+	border: 2px solid currentColor;
+}
+
+.btn-cta.btn-cta-red {
+	@extend .btn-md;
+    display: flex;
+    align-items: center;
+	line-height: auto !important;
+	background-color: map-get($btn-colors, 'red');
+	color: #FFF;
+}
+
+.btn-cta.btn-cta-white {
+	@extend .btn-md;
+    display: flex;
+    align-items: center;
+	line-height: auto !important;
+	background-color: #FFF;
+	color: $c-purple;
+}
