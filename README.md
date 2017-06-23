@@ -29,3 +29,5 @@ You can run `npm run watch` to have both webpack and node-sass to watch for chan
 We'll be using the classic `git` workflow of merge requests (pull requests) to submit code to the `master` branch. Deployment will be automatically run and submitted to the staging server upon merging into master.
 
 Before submitting your merge request, run the command `npm run build` to compile JavaScript and CSS files. There should be no errors and the builds should complete successfuly.
+
+###
